@@ -7,13 +7,22 @@ import {
   CryptoHistory,
   ForbesList,
 } from 'components';
+import dataArticle from './data/article.json';
 
 export const App = () => {
   return (
     <Section>
       <Container>
         <Heading title="Task 1 Blog Card" bottom />
-        <BlogCard />
+        <BlogCard
+          poster={dataArticle.poster}
+          tag={dataArticle.tag}
+          title={dataArticle.title}
+          description={dataArticle.description}
+          name={dataArticle.name}
+          avatar={dataArticle.avatar}
+          postedAt={dataArticle.postedAt}
+        />
 
         <Heading title="Task 2 Statistics" top bottom />
         <Statistics title="Main Statistics" />
